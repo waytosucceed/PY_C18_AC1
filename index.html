@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functions-III</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <img src="./logo/Logo.png" alt="Logo" class="logo" />
+    <img src="./logo/header.png" alt="Header" class="header-image" />
+  </header>
+
+  <div class="container mt-5">
+    <h1 class="text-center">Functions-III</h1>
+    <p class="text-center">Click on each topic to learn more.</p>
+    <div class="row">
+        <div>
+            <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#scopeOfVariablesModal">
+                Scope of Variables
+            </button>
+        </div>
+        <div>
+            <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#lambdaFunctionModal">
+                Lambda Function
+            </button>
+        </div>
+          <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#advancedFunctionsModal">
+                    Advanced Functions
+                </button>
+            </div>
+    </div>
+    
+    
+  
+
+
+    <!-- Modals -->
+    <div class="modal fade" id="lambdaFunctionModal" tabindex="-1" aria-labelledby="lambdaFunctionLabel" aria-hidden="true">
+        <div class="modal-dialog custom-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="lambdaFunctionLabel">Lambda Function</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-container">
+                        <div class="text-content">
+                            <p style="font-size: 1.5rem;">
+                                <b>Lambda</b> is a small anonymous function that can take any number of arguments but returns only one expression. <br><br>
+                                Sometimes we use functions that do not have multiple statements, and in such cases, defining a function just for a single line becomes unreasonable. <br><br>
+                                This is when we use <b style="color: rgb(227, 148, 2);">lambda functions</b>. <br><br>
+                                
+    
+                                The syntax of the lambda function is: <br><br>
+                                
+    
+                                <span style="color: rgb(227, 148, 2); font-size: 1.7rem;">lambda arguments : expression</span> <br><br>
+                                <B>Without Lambda Function:</B>
+                                <br>Suppose you wish to write a function to multiply two numbers this is how we can define a function for that:<br>
+                                <img class="modal-img" src="./images/image29.png" alt="sc" style="width: 100%; max-width: 400px" />  <br> <br>
+                                <B>With Lambda Function:</B><br>
+                                With the help of the Lambda function, it can be done in two lines like so:
+                                <img class="modal-img" src="./images/image1.png" alt="sc" style="width: 100%; max-width: 500px" />  <br> <br>
+
+                                The expression here simply gets returned — <b>you do not have to mention the return statement</b>. <br><br>
+                                
+                                Lambda functions are often used in many advanced functions. Let’s have a look in the next section.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="scopeOfVariablesModal" tabindex="-1" aria-labelledby="scopeOfVariablesLabel" aria-hidden="true">
+        <div class="modal-dialog custom-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scopeOfVariablesLabel">Scope of Variables</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-container">
+                        <div class="text-content">
+                            <p style="font-size: 1.5rem;">
+                                <b style="color: rgb(227, 148, 2);">SCOPE OF VARIABLES</b> <br><br>
+                                Have you ever wondered why some variables work perfectly inside a function but give you errors when you try to access them outside? 
+<br><br>This happens because of something called the <b>scope of variables</b>. 
+
+
+
+<br><br>Understanding scope is essential for controlling where your variables can be accessed and used.
+<br><br>
+    
+                                <b><i>A variable's <b>scope</b> refers to the region where we can access the variables.</i></b> <br><br>
+                                Based on the scope, variables can be classified into 3 types: <br><br>
+                                
+                                <b>Local Scope</b> <br>
+                                <b>Global Scope</b> <br>
+                                <b>Nonlocal Scope</b> <br><br>
+    
+                                <b style="color: rgb(227, 148, 2);">Local Scope</b> <br>
+                                Variables created inside a function or a block are called <b>local variables</b>. They can only be accessed inside the function. <br><br>
+                                Let’s have a look at an example: <br><br>
+                                <img class="modal-img" src="./images/image3.png" alt="sc" style="width: 100%; max-width: 500px" />  <br> <br>
+                                <img class="modal-img" src="./images/image2.png" alt="sc" style="width: 100%; max-width: 600px" />  <br> <br>
+
+                                When we try to print the <b>msg</b> variable inside the <code>show_msg()</code> function, it works, but when we print it outside the function, it gives an error. <br><br>
+                                <b>Local variables</b> are useful when you want temporary storage that doesn’t affect the rest of your program.
+                                <br><br>When you need a variable to be accessible across different parts of your program, you can use <b>global variables</b>.
+    <br><br>
+                                <b style="color: rgb(227, 148, 2);text-align: center;">Global Scope</b> <br>
+                                A variable that is not created inside any block but rather in the main body of the code is called a <b>global variable.</b> <br><br>
+                                Let’s understand with an example: <br><br>
+                                <img class="modal-img" src="./images/image27.png" alt="sc" style="width: 60%; max-width: 500px" />  <br> <br>
+                                Here <b>msg1</b> is a <b>global</b> variable and <b>msg2</b> is a <b>local</b> variable. <br><br>
+                                <b>Global variables </b>can be <b>accessed anywhere</b> in the code. You can understand pretty much why it has the name <b>Global</b>. <br><br>
+    
+                                <span style="color: rgb(227, 148, 2);"><b>When the global and local variable’s name is the same</b></span>
+                                <br>When a variable with the same name exists in both global and local scopes:
+                                <ul style="font-size: 1.5rem;">
+                                    <li style="font-size: 1.5rem;">Inside the function, Python prioritizes the local variable.</li>
+                                    <li style="font-size: 1.5rem;">Outside the function, the global variable is used.</li>
+                                </ul>
+                            </p><p style="font-size: 1.5rem;">
+                                <br>Let me show you what I mean by that. <br><br>
+                                <img class="modal-img" src="./images/image4.png" alt="sc" style="width: 100%; max-width: 500px" />  <br> <br>
+
+                                <span style="color: rgb(227, 148, 2);"><b>Creating a global variable inside a function</b></span>
+                                <br>If you wish to create a global variable inside a function you can do that with the help of the keyword <b>global</b>. <br><br>
+                                <img class="modal-img" src="./images/image7.png" alt="sc" style="width: 100%; max-width: 500px" />  <br> <br>
+                                <span style="color: rgb(227, 148, 2);"><b>Making changes to a global variable inside a function</b></span><br>
+                                The <b>global</b> keyword can also be used if you wish to make changes to a global variable inside a function.<br>
+                                <b>For example:</b><br><br>
+                                <img class="modal-img" src="./images/image6.png" alt="sc" style="width: 100%; max-width: 500px" />  <br> <br>
+                                Now that you have a good understanding of local and global scope, let’s move on to another scope which is nonlocal.
+<br><br>Before understanding nonlocal scope, we need to understand nested functions.
+<br><br>
+<b style="color: rgb(227, 148, 2);">Nested Functions</b><br>
+A nested function is simply a function defined inside another function.
+<br><br>
+Let’s have a look at the nested function:
+<div style="display: flex;">
+    <div style="width: 40%;"><img class="modal-img" src="./images/1.png" alt="sc" style="width: 100%; max-width: 300px" /></div>
+    <div style="width: 60%;font-size: 1.5rem;">
+        Here func1() is the outer function and func2() is the inner function which is defined and called inside func1().
+<br><br>
+This allows the inner function to access the variables of the outer function.
+
+    </div>
+</div>
+    <p style="font-size: 1.5rem;">
+        While inner functions can read the variables of their outer function, they typically cannot modify them directly unless we use a special mechanism, and here is where the nonlocal keyword comes in.
+   <br><br>
+
+
+
+                                <b style="color: rgb(227, 148, 2);">Nonlocal Scope</b> <br>
+                                The <b>nonlocal scope</b> in Python refers to the scope that is neither in the local scope (within the current function) nor in the global scope but is instead in an enclosing function's scope.  <br><br>
+   <b> For example: </b> </p>
+    <div style="display: flex;">
+        <div style="width: 40%;"><img class="modal-img" src="./images/image9.png" alt="sc" style="width: 100%; max-width: 300px" /></div>
+        <div style="width: 60%;font-size: 1.5rem;">
+            The nonlocal keyword is used in func2() to refer to the x variable in the enclosing function (func1()). 
+<br><br>Without nonlocal, func2() would treat x as a new local variable.
+<br><br>When func2() updates x to "Bye", it directly modifies the x variable in the scope of func1().
+<br><br>The func1() function returns the updated value of x, which is "Bye".
+
+        </div>
+    </div>  
+    <p style="font-size: 1.5rem;">
+        Nonlocal scope is useful when working with nested functions and you need to modify a variable in the enclosing function without making it global.
+<br><br>We’ve explored how variables behave in different scopes.
+<br><br>But what if we want to write a function that doesn’t need variable declarations or even a formal name? For instance, a function that performs a quick operation, like multiplying two numbers, without the need for a full def block?
+<br><br>In such cases, we can use the lambda function. Let’s have a look in the next section.
+<br><br>
+    </p>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="advancedFunctionsModal" tabindex="-1" aria-labelledby="advancedFunctionsLabel"
+    aria-hidden="true">
+    <div class="modal-dialog custom-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="advancedFunctionsLabel">Advanced Functions</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="content-container">
+                    <div class="text-content" style="font-size: 1.5rem;">
+
+                        🔍 <b>Advanced Functions</b> <br><br>
+
+                        ● <b>map()</b> <br>
+                        The <code>map()</code> function applies a given function to all the items in an iterable and returns a map object. 
+<br><br>You can convert the map object to a list or a tuple using list() or tuple() functions respectively.
+<br><br>This is useful in transforming the elements of an iterable without the help of loops.
+<br><br>Let’s see how we can use the <code>map()</code> function with tuples and lists.
+<br><br>
+                        <div style="display: flex; gap: 2rem; ">
+                            <div style="background-color: #C6E7FF; padding: 1rem;border-radius: 1rem;">
+                                <b>Tuples</b> <br>
+                                <img src="./images-advanced/image34.png" alt=""> <br>
+                                <img src="./images-advanced/image35.png" alt=""><br>
+                                <img src="./images-advanced/image37.png" alt=""><br><br>
+                                The <b>map()</b> function applies the lambda function lambda <b>y: y + 10</b> to each element in the tuple tup, adding 10 to each element. 
+<br><br>The result is a map object, which can be converted into a tuple to see transformed values.
+                            </div>
+                            <div style="background-color: #D4BEE4; padding: 1rem; border-radius: 1rem;">
+                                <b>List</b> <br>
+                                <img src="./images-advanced/image38.png" alt=""> <br>
+                                <img src="./images-advanced/image39.png" alt=""><br><br>
+                                The <b>map()</b> function applies the lambda function lambda <b>x: x.lower()</b> to each element in new_list, converting each string to lowercase. 
+<br><br>The result is a map object, which can be converted into a list to view the transformed values.
+
+                            </div>
+                        </div>
+                        
+
+                        <br>
+                        <hr>
+
+                        ● <b>filter()</b> <br>
+                        The <code>filter()</code> function in Python is used to filter elements from an iterable (like a list, tuple, or set) based on a specified condition. 
+<br><br>It returns a filter object which can be converted to a list or tuple using <code>list()</code> or <code>tuple()</code> functions respectively.
+<br><br>It is often used with lambda functions for concise filtering logic.
+<br><br>Let’s see how we can use the <code>filter()</code> function with tuples and lists.
+ <br><br>
+                        <div style="display: flex; gap: 2rem; ">
+                            <div style="background-color: #C6E7FF; padding: 1rem;border-radius: 1rem;width: 40%;">
+                                <b>Tuples</b> <br>
+                                <img src="./images-advanced/image34.png" alt=""> <br>
+                                <img src="./images-advanced/image41.png" alt=""><br>
+                                The <code>filter()</code> function applies the lambda function, lambda <b>x: x > 20</b> to each element in tup, returning only the elements greater than 20. <br><br>
+                                The result is a filter object, which can be converted into a tuple to view the filtered values.
+                            </div>
+                            <div style="background-color: #D4BEE4; padding: 1rem; border-radius: 1rem;width: 60%;">
+                                <b>List</b> <br>
+                                <img src="./images-advanced/image38.png" alt=""> <br>
+                                <img src="./images-advanced/image43.png" alt=""><br>
+                                The filter() function applies the lambda function, lambda item: 'n' in item to each element in new_list, returning only the elements that contain the letter 'n'. 
+                                <br><br>The result is a filter object, which can be converted into a list to view the filtered values.
+                                <br><br>If the map function is used instead, the results would look like this:<br><br>
+                                <img src="./images-advanced/image38.png" alt=""> <br>
+                                <img src="./images-advanced/image16.png" alt=""><br>
+                                In this case, the map() function applies the lambda function, lambda item: 'n' in item to each element in new_list. 
+<br><br>This checks whether the letter 'n' is present in each item and returns True or False for each element. 
+<br><br>The result is a map object, which is then converted into a list and printed, showing a list of boolean values.
+
+                            </div>
+                        </div>
+                        <br>
+                        <br><br>Until now, we’ve seen how <code>map()</code> and <code>filter()</code> are useful for applying functions, especially lambda functions, to iterables. 
+                        <br><br>These functions allow us to transform or filter elements based on a condition or operation.
+<br><br>However, <code>zip()</code> is a bit different. Unlike <code>map()</code> and <code>filter()</code>, which require a function (like lambda) to operate on the elements, <code>zip()</code> doesn’t need any extra functions. 
+
+<hr>
+                        ● <b>zip()</b> <br>
+                        The <code>zip()</code> function in Python takes multiple iterables and pairs their elements based on their positions. 
+<br><br>It returns a zip object of tuples, where each tuple contains one element from each iterable. 
+<br><br>This zip object can be converted into a list or tuple using the <code>list() </code>or <code>tuple()</code> functions, respectively.
+<br><br>Let’s see how we can use the <code>zip()</code> function with tuples and lists.
+<br>
+                        <div style="display: flex; gap: 2rem; ">
+                            <div style="background-color: #C6E7FF; padding: 1rem;border-radius: 1rem;">
+                                <b>Tuples</b> <br>
+                                <img src="./images-advanced/image17.png" alt="" width="100%">
+                            </div>
+                            <div style="background-color: #D4BEE4; padding: 1rem; border-radius: 1rem;">
+                               <b> List</b> <br>
+                                <img src="./images-advanced/image18.png" alt="" width="90%"><br><br>
+                                <img src="./images-advanced/image19.png" alt="" width="90%">
+                            </div>
+                        </div>
+                        <br><br>
+                        Now it's time for you to implement these concepts at your end!
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ 
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
